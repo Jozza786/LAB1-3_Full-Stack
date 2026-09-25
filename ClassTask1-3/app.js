@@ -25,14 +25,12 @@ function showResult(message, type) {
   result.className = type;
 }
 
-// Step 2: Run this code when the button is clicked
 calcBtn.addEventListener("click", () => {
   // Step 3: Read the values (.value always gives a string)
   const studentName = nameInput.value.trim();
   const marksText = marksInput.value;
   const marks = Number(marksText);
 
-  // Bonus: validation
   if (studentName === "") {
     showResult("Please enter the student's name.", "error");
     return;
