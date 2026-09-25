@@ -1,9 +1,5 @@
 # Full Stack Web Development - Lab 1 - 3
 
-
-## Assignment
-This repository contains my Full Stack Web Development Lab 03 work using HTML, CSS, and JavaScript.
-
 ## Tasks
 
 ### Q1 - Temperature Converter
