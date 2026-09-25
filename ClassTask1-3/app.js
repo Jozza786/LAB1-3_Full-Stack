@@ -4,7 +4,7 @@
 const nameInput = document.getElementById("name");
 const marksInput = document.getElementById("marks");
 const calcBtn = document.getElementById("calcBtn");
-const result = document.getElementById("result");
+const result = document.getElementById("result"); 
 
 // Returns the grade for the given marks
 function getGrade(marks) {
