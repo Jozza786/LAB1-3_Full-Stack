@@ -14,6 +14,11 @@ Displays student records, grades, class average, and top scorer.
 ### Q4 - Counter and Theme Switcher
 Includes a counter with +1, -1, Reset and Dark/Light Mode.
 
+## Class Task
+
+https://github.com/Jozza786/Full-Stack-Frontend-LAB03
+
+
 - HTML
 - CSS
 - JavaScript
