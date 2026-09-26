@@ -1,40 +1,35 @@
-//jozza 
+//jozza
+
 // Convert Celsius to Fahrenheit
 function celsiusToFahrenheit(c) {
     return (c * 9 / 5) + 32;
 }
-
 // Convert Fahrenheit to Celsius
 const fahrenheitToCelsius = (f) => {
     return (f - 32) * 5 / 9;
 };
-
-const temperatureInput = document.getElementById("temperature");
-const toFahrenheitButton = document.getElementById("toFahrenheit");
-const toCelsiusButton = document.getElementById("toCelsius");
+const temperature = document.getElementById("temperature");
 const result = document.getElementById("result");
-
-toFahrenheitButton.addEventListener("click", function () {
-    const value = Number(temperatureInput.value);
-
-    if (temperatureInput.value === "" || isNaN(value)) {
-        result.textContent = "Please enter a valid number.";
+document.getElementById("toFahrenheit").addEventListener("click", function () {
+    
+    if (temperature.value === "") {
+        result.textContent = "Please enter a temperature.";
         return;
     }
-
+    const value = Number(temperature.value);
     const answer = celsiusToFahrenheit(value);
 
     result.textContent = value + " °C = " + answer.toFixed(1) + " °F";
 });
 
-toCelsiusButton.addEventListener("click", function () {
-    const value = Number(temperatureInput.value);
+document.getElementById("toCelsius").addEventListener("click", function () {
 
-    if (temperatureInput.value === "" || isNaN(value)) {
-        result.textContent = "Please enter a valid number.";
+    if (temperature.value === "") {
+        result.textContent = "Please enter a temperature.";
         return;
     }
 
+    const value = Number(temperature.value);
     const answer = fahrenheitToCelsius(value);
 
     result.textContent = value + " °F = " + answer.toFixed(1) + " °C";
