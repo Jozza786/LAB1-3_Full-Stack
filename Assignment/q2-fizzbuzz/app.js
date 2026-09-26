@@ -1,36 +1,26 @@
 //jozza
-const limitInput = document.getElementById("limit");
-const generateButton = document.getElementById("generateBtn");
-const fizzBuzzList = document.getElementById("fizzBuzzList");
+const limit = document.getElementById("limit");
+const list = document.getElementById("fizzBuzzList");
+const button = document.getElementById("generateBtn");
 
-generateButton.addEventListener("click", function () {
+button.addEventListener("click", function () {
+    list.innerHTML = "";
 
-    const limit = Number(limitInput.value);
+    const number = Number(limit.value);
 
-    fizzBuzzList.innerHTML = "";
-
-    if (limit <= 0 || isNaN(limit)) {
-        fizzBuzzList.innerHTML = "<li>Please enter a valid number.</li>";
-        return;
-    }
-
-    for (let i = 1; i <= limit; i++) {
-
-        const listItem = document.createElement("li");
+    for (let i = 1; i <= number; i++) {
 
         if (i % 3 === 0 && i % 5 === 0) {
-            listItem.textContent = "FizzBuzz";
+            list.innerHTML += "<li>FizzBuzz</li>";
         }
         else if (i % 3 === 0) {
-            listItem.textContent = "Fizz";
+            list.innerHTML += "<li>Fizz</li>";
         }
         else if (i % 5 === 0) {
-            listItem.textContent = "Buzz";
+            list.innerHTML += "<li>Buzz</li>";
         }
         else {
-            listItem.textContent = i;
+            list.innerHTML += "<li>" + i + "</li>";
         }
-
-        fizzBuzzList.appendChild(listItem);
     }
 });
