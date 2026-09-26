@@ -7,7 +7,7 @@ const students = [
     { name: "Hussain", rollNo: "CS-604", marks: 48 }
 ];
 // Return grade according to marks
-function getGrade(marks) {
+function getGrade(marks) { 
 
     if (marks >= 85) {
         return "A";
