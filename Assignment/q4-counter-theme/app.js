@@ -1,38 +1,31 @@
 //jozza
 let count = 0;
+const countDisplay = document.getElementById("count");
 
-const countElement = document.getElementById("count");
-const increaseButton = document.getElementById("increaseBtn");
-const decreaseButton = document.getElementById("decreaseBtn");
-const resetButton = document.getElementById("resetBtn");
-const themeButton = document.getElementById("themeBtn");
-
-increaseButton.addEventListener("click", function () {
+document.getElementById("increaseBtn").addEventListener("click", function () {
     count++;
-    countElement.textContent = count;
+    countDisplay.textContent = count;
 });
 
-decreaseButton.addEventListener("click", function () {
+document.getElementById("decreaseBtn").addEventListener("click", function () {
 
     if (count > 0) {
         count--;
-        countElement.textContent = count;
-    }
+        countDisplay.textContent = count; }
 });
 
-resetButton.addEventListener("click", function () {
+document.getElementById("resetBtn").addEventListener("click", function () {
     count = 0;
-    countElement.textContent = count;
+    countDisplay.textContent = count;
 });
 
-themeButton.addEventListener("click", function () {
-
+document.getElementById("themeBtn").addEventListener("click", function () {
     document.body.classList.toggle("dark");
 
     if (document.body.classList.contains("dark")) {
-        themeButton.textContent = "Light Mode";
+        this.textContent = "Light Mode";
     }
     else {
-        themeButton.textContent = "Dark Mode";
+        this.textContent = "Dark Mode";
     }
 });
